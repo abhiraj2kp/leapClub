@@ -8,8 +8,15 @@ interface Props {
   route: any;
 }
 const SplashScreen = React.memo(function SplashScreen(props: Props) {
-  const [animatedValue, setAnimatedValue] = useState(new Animated.Value(0));
+  /**
+   * @description initilize an animated value
+   */
+  const [animatedValue] = useState(new Animated.Value(0));
 
+  /**
+   * @description start an animation
+   * @function useEffect
+   */
   useEffect(() => {
     Animated.timing(animatedValue, {
       toValue: 1,
@@ -60,4 +67,7 @@ const styles = StyleSheet.create({
   imageStyle: {resizeMode: 'contain'},
 });
 
+/**
+ * @exports export SplashScreen Components
+ */
 export default SplashScreen;

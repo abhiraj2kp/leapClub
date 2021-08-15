@@ -12,10 +12,19 @@ import RouteName from '../../Route/RouteName';
 import RNExitApp from 'react-native-exit-app';
 import {Colors, Strings} from '../../Constants';
 
+/**
+ * @interface Props
+ * @description define all required props
+ */
 interface Props {
   route: any;
   navigation: any;
 }
+
+/**
+ * @function GameHome
+ * @description Creating a GameHome Component
+ */
 const GameHome = React.memo(function GameHome(props: Props) {
   /**
    * @function onCloseApp

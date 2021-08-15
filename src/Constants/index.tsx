@@ -1,7 +1,7 @@
 import Colors from './Colors';
+import Images from './Images';
 import Strings from './Strings';
 import StaticData from './StaticData';
-import Images from './Images';
 
 /**
  * @description Export all the Constant files

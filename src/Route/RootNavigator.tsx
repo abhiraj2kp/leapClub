@@ -1,11 +1,13 @@
 import React from 'react';
-
+import RouteName from './RouteName';
 import {createStackNavigator} from '@react-navigation/stack';
 import {NavigationContainer} from '@react-navigation/native';
-
-import RouteName from './RouteName';
 import {MemoryGame, SplashScreen, GameHome} from '../Screens';
 
+/**
+ *
+ * @description create a stack navigator
+ */
 const RootStack = createStackNavigator();
 
 class RootNavigator extends React.PureComponent {
@@ -31,4 +33,8 @@ class RootNavigator extends React.PureComponent {
   }
 }
 
+/**
+ * @exports RootNavigator
+ * @description export rootnavigator
+ */
 export default RootNavigator;

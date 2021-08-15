@@ -14,6 +14,11 @@ interface Props {
   onCardPress: Function;
   isCardVisible: boolean;
 }
+
+/**
+ * @function CardItem
+ * @description Creating a CardItem Component
+ */
 class CardItem extends React.Component<Props> {
   render() {
     return (
