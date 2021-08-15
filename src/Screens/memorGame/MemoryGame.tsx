@@ -225,6 +225,15 @@ class MemoryGame extends React.PureComponent<Props, State> {
   };
 
   /**
+   *
+   * @function navigateToBack
+   * @description go to previous screen
+   */
+  navigateToBack = () => {
+    this.props.navigation.goBack();
+  };
+
+  /**
    * @description Returning JSX of MemoryGarme component
    * @function render
    */
@@ -254,7 +263,7 @@ class MemoryGame extends React.PureComponent<Props, State> {
         />
         <View style={styles.bottomContainer}>
           <TouchableOpacity
-            onPress={() => this.props.navigation.goBack()}
+            onPress={this.navigateToBack}
             activeOpacity={0.5}
             style={styles.actionContainer}>
             <Text style={styles.actionTitle}>{Strings.menu}</Text>

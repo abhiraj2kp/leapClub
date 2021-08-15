@@ -48,15 +48,22 @@ const GameHome = React.memo(function GameHome(props: Props) {
     );
     return () => eventListener.remove();
   });
+
+  /**
+   * @function goToMemoryGame
+   * @description navigating to memoryGame Screen
+   */
+
+  const goToMemoryGame = () => {
+    props.navigation.navigate(RouteName.Screens.MemoryGame);
+  };
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle="dark-content" backgroundColor={Colors.transparent} />
       <Text style={styles.memoryGameTitle}>{Strings.memoryGame}</Text>
       <View style={styles.subContainer}>
         <TouchableOpacity
-          onPress={() =>
-            props.navigation.navigate(RouteName.Screens.MemoryGame)
-          }
+          onPress={goToMemoryGame}
           activeOpacity={0.5}
           style={styles.gameActionContainer}>
           <Text style={styles.actionTitle}>{Strings.play}</Text>
