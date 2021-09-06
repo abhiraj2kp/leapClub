@@ -17,6 +17,7 @@ const shuffleCardData = (cardData: Array<CardData>) => {
     cardData[i] = cardData[j];
     cardData[j] = temp;
   }
+
   return cardData;
 };
 
